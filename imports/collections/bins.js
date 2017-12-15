@@ -11,6 +11,10 @@ Meteor.methods({
 	},
 	'bins.remove': function(bin){
 		return Bins.remove(bin);
+	},
+	'bins.update': function(bin, content){
+		//if u wanna update something in mongo you prob have to use mongo modifiers
+		return Bins.update(bin._id, {$set: { content } });
 	}
 });
 
