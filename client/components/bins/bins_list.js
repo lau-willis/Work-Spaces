@@ -34,6 +34,7 @@ class BinsList extends Component{
 
 export default withTracker(() => {
 	Meteor.subscribe('bins');
-
+	Meteor.subscribe('sharedBins');
+	
 	return {bins: Bins.find({}).fetch()};
 })(BinsList);

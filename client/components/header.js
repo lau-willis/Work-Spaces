@@ -14,7 +14,7 @@ class Header extends Component{
 		return (
 			<nav className="nav navbar-default">
 				<div className="navbar-header">
-					<Link className="navbar-brand" to="/">Markbin</Link>
+					<Link className="navbar-brand" to="/">Markdown Editor</Link>
 				</div>
 				<ul className="nav navbar-nav">
 					<li>

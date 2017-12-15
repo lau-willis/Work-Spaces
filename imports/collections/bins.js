@@ -15,6 +15,9 @@ Meteor.methods({
 	'bins.update': function(bin, content){
 		//if u wanna update something in mongo you prob have to use mongo modifiers
 		return Bins.update(bin._id, {$set: { content } });
+	},
+	'bins.share': function(bin, email){
+		return Bins.update(bin._id, {$push:{sharedWith: email}})
 	}
 });
 
